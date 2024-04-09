@@ -84,3 +84,8 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* === clerk class override === */
+.cl-providerIcon__github {
+  filter: invert(1);
+}
