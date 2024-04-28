@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react"
+import { GoogleAnalytics } from '@next/third-parties/google'
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
@@ -44,6 +45,7 @@ export default function RootLayout({
           {children}
           <Toaster />
         </body>
+        <GoogleAnalytics gaId="G-EFS8T077YL" />
       </ClerkProvider>
       <Analytics />
     </html>
