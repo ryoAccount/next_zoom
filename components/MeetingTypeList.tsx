@@ -9,6 +9,7 @@ import { Call, useStreamVideoClient } from '@stream-io/video-react-sdk'
 import { useToast } from "@/components/ui/use-toast"
 import { Textarea } from './ui/textarea'
 import ReactDatePicker from 'react-datepicker'
+import Loader from './Loader'
 
 const MeetingTypeList = () => {
   const router = useRouter();
@@ -46,7 +47,7 @@ const MeetingTypeList = () => {
             description
           }
         }
-      })
+      });
 
       setCallDetails(call);
 
@@ -60,6 +61,8 @@ const MeetingTypeList = () => {
       toast({title: "Failed to create meeting"});
     }
   }
+
+  if (!client || !user) return <Loader />;
 
   const meetingLink = `${process.env.NEXT_PUBLIC_BASE_URL}/meeting/${callDetails?.id}`
 
