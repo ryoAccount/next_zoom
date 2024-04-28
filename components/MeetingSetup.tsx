@@ -3,9 +3,11 @@
 import { DeviceSettings, VideoPreview, useCall } from '@stream-io/video-react-sdk'
 import React, { useEffect, useState } from 'react'
 import { Button } from './ui/button';
+import { useRouter } from 'next/navigation';
 
 const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (val: boolean) => void }) => {
   const [isMicCamToggleOn, setIsMicCamToggleOn] = useState(false);
+  const router = useRouter();
 
   const call = useCall();
 
@@ -43,6 +45,9 @@ const MeetingSetup = ({ setIsSetupComplete }: { setIsSetupComplete: (val: boolea
         setIsSetupComplete(true);
       }}>
         Join meeting
+      </Button>
+      <Button className='rounded-md bg-red-500 px-4 py-2.5' onClick={() => router.back()}>
+        Back
       </Button>
     </div>
   )
