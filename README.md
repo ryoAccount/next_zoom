@@ -42,3 +42,23 @@ https://youtu.be/R8CIO1DZ2b8?si=k57n9g7dG7se9CFV
 ## GitHub
 
 https://github.com/adrianhajdin/zoom-clone
+
+## Varcel
+
+https://zoom-clone-ryocv.vercel.app/
+
+## Video Tool
+
+https://dashboard.getstream.io/
+
+## Authorization
+
+https://dashboard.clerk.com/
+
+## shadcn/ui
+
+https://ui.shadcn.com/
+
+## renovate
+
+https://developer.mend.io/github/ryoAccount
