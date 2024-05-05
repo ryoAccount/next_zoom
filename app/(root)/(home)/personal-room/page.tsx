@@ -48,20 +48,24 @@ const PersonalRoom = () => {
       </h1>
 
       <div className='flex w-full flex-col gap-8 xl:max-w-[900px]'>
-        <Table title='Topic' description={`${user?.username}'s Meeting Room`} />
+        <Table title='Topic' description={`${user?.username ?? 'Your'} Meeting Room`} />
         <Table title='Meeting ID' description={meetingId!} />
-        <Table title='Invite Link' description={meetingLink} />
+        <div className='flex flex-col items-start gap-2 xl:flex-row'>
+          <h1 className='text-base font-medium text-sky-1 lg:text-xl xl:min-w-32'>Invite Link</h1>
+          <h1 className='truncate text-sm font-bold max-sm:max-w-[280px] lg:text-xl'>
+            <Button className='bg-dark-3' onClick={() => {
+              navigator.clipboard.writeText(meetingLink);
+              toast({ title: 'Link copied' });
+            }}>
+              Copy Invite Link
+            </Button>
+          </h1>
+        </div>
       </div>
 
       <div className='flex gap-5'>
         <Button className='bg-blue-1' onClick={startRoom}>
           Start Meeting
-        </Button>
-        <Button className='bg-dark-3' onClick={() => {
-          navigator.clipboard.writeText(meetingLink);
-          toast({ title: 'Link copied' });
-        }}>
-          Copy Invite Link
         </Button>
       </div>
 

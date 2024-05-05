@@ -4,10 +4,10 @@ import { Metadata } from 'next';
 import React, { ReactNode } from 'react'
 
 export const metadata: Metadata = {
-  title: "YOOM",
-  description: "Video calling app",
+  title: "RYOOM",
+  description: "Video calling app by JavaScript Mastery",
   icons: {
-    icon: 'icons/logo.svg'
+    icon: 'icons/ryoom-logo.svg'
   }
 };
 
