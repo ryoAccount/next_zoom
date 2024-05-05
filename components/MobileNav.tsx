@@ -30,13 +30,13 @@ const MobileNav = () => {
         <SheetContent side='left' className='border-none bg-dark-1'>
           <Link href='/' className='flex items-center gap-1'>
             <Image 
-              src="/icons/logo.svg"
+              src="/icons/ryoom-logo.svg"
               width={32}
               height={32}
-              alt='Yoom logo'
+              alt='Ryoom logo'
               className='max-sm:size-10'
             />
-            <p className='text-[26px] font-extrabold text-white'>Yoom</p>
+            <p className='text-[26px] font-extrabold text-white'>Ryoom</p>
           </Link>
           <div className='flex h-[calc(100vh-72px)] flex-col justify-between overflow-y-auto'>
             <SheetClose asChild>
